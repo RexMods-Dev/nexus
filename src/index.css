@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  :root {
+    --background: 221 69% 14%; /* Deep Sapphire #0B1B3D */
+    --foreground: 216 20% 95%; /* Ice Gray #F0F2F5 */
+    --card: 221 69% 14%;
+    --card-foreground: 216 20% 95%;
+    --popover: 221 69% 14%;
+    --popover-foreground: 216 20% 95%;
+    --primary: 216 20% 95%;
+    --primary-foreground: 221 69% 14%;
+    --secondary: 221 69% 20%;
+    --secondary-foreground: 216 20% 95%;
+    --muted: 221 69% 20%;
+    --muted-foreground: 216 20% 70%;
+    --accent: 30 35% 59%; /* Light Bronze #B89775 */
+    --accent-foreground: 216 20% 95%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 216 20% 95%;
+    --border: 221 69% 25%;
+    --input: 221 69% 25%;
+    --ring: 30 35% 59%;
+    --radius: 0rem;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  html {
+    @apply scroll-smooth;
+    background-color: #0B1B3D;
+    color: #F0F2F5;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased min-h-screen overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-accent text-white;
+  }
+
+  /* Cinematic Grain Texture Overlay */
+  .bg-noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B1B3D; 
+}
+::-webkit-scrollbar-thumb {
+  background: #1A2536; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B89775; 
+}
