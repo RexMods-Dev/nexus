@@ -5,7 +5,8 @@ export const team = [
     role: "Game Director",
     department: "Design",
     bio: "Visionary behind the studio's core design philosophy.",
-    image: "/images/studio.png" // Reusing studio image for placeholder
+    // Let Vite inject the correct base path automatically
+    image: `${import.meta.env.BASE_URL}images/studio.png` 
   },
   {
     id: 2,
@@ -13,7 +14,7 @@ export const team = [
     role: "Lead Engineer",
     department: "Engineering",
     bio: "Architects the foundational systems that make our worlds tick.",
-    image: "/images/studio.png"
+    image: `${import.meta.env.BASE_URL}images/studio.png`
   },
   {
     id: 3,
@@ -21,7 +22,7 @@ export const team = [
     role: "Art Director",
     department: "Art",
     bio: "Defines the visual language and aesthetic pillars of every project.",
-    image: "/images/studio.png"
+    image: `${import.meta.env.BASE_URL}images/studio.png`
   },
   {
     id: 4,
@@ -29,7 +30,7 @@ export const team = [
     role: "Lead Technical Animator",
     department: "Animation",
     bio: "Bridges the gap between technical constraints and artistic vision.",
-    image: "/images/studio.png"
+    image: `${import.meta.env.BASE_URL}images/studio.png`
   },
   {
     id: 5,
@@ -37,7 +38,7 @@ export const team = [
     role: "Audio Director",
     department: "Audio",
     bio: "Crafts the sonic landscapes that bring our worlds to life.",
-    image: "/images/studio.png"
+    image: `${import.meta.env.BASE_URL}images/studio.png`
   },
   {
     id: 6,
@@ -45,6 +46,6 @@ export const team = [
     role: "Executive Producer",
     department: "Production",
     bio: "Ensures the team has everything they need to do their best work.",
-    image: "/images/studio.png"
+    image: `${import.meta.env.BASE_URL}images/studio.png`
   }
 ];
